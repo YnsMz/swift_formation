@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var maTable: UITableView!
     var tbGateaux: [Gateau] = [Gateau]()
@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         tbGateaux.append(Gateau(nom:"Meringue", nomImage:"meringue.jpg", description:"Meringue aux fruits"))
         
         maTable.dataSource = self
+        maTable.delegate = self
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,16 +46,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         cellule.imgGateau.image = UIImage(named: gateau.nomImage)
         
         return cellule
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        var idxLigneSelectionnee = maTable.indexPathForSelectedRow!.row
-        
-        let gateauSlectionne = tbGateaux[idxLigneSelectionnee]
-        
-        let destination = segue.destination as! DetailsViewController
-        
-        destination.gateau_a_afficher = gateauSlectionne
     }
 
     override func didReceiveMemoryWarning() {

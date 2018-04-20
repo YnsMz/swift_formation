@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Salaire</key>
+	<real>2935.56</real>
+	<key>Nombre_enfant</key>
+	<integer>2</integer>
+	<key>Date_Naissance</key>
+	<date>1932-11-29T13:45:09Z</date>
+	<key>Prenom</key>
+	<string>Jacques</string>
+	<key>Nom</key>
+	<string>Chirac</string>
+</dict>
+</plist>
